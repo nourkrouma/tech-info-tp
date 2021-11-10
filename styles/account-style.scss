@@ -1,0 +1,129 @@
+:root{
+    --primarycolor:#FFAD05;
+    --darkcolor:#0D1B2A;
+    --lightwhite:#F7F7F7;
+    --grey:#747070;
+}
+body{
+    font-family: 'Poppins';
+    background-color: #F7F7F7;
+    span{
+        font-weight: 600;
+        text-decoration: solid;
+        text-transform: capitalize;
+    }
+}
+ul{
+    list-style-type: none;
+}
+
+.navbar{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0D1B2A;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .logo{
+        // display the logo name in the far left of the navigation bar
+        // padding-right:33% ;
+        padding-top: 5px;
+        font-size: 1.7em;
+        font-weight: 400;
+    }
+    h1{
+        color: white;
+        span{
+            color: var(--primarycolor);
+        }
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }:hover{
+        color: var(--primarycolor);
+    }:active{
+        color: var(--primarycolor);
+    }
+    .links{
+        font-weight:400;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 8px;
+        justify-content: space-around;
+    }
+    .accountsection {ul{
+        display: flex;
+        flex-direction: row;
+        gap:8px;
+        font-weight: 500;
+    }.signin-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+font-weight: 400;
+background-color: var(--primarycolor);
+border-radius: 9px;
+text-decoration: none;
+width: 100px;
+height: 100x;
+    }
+}
+}
+.accountSection{
+    margin:100px 20px;
+    background-color: white;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    .different-auth{
+        margin-top: 25px;  
+    }
+    .submit{
+        margin-top: 10px;
+        margin-left: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--primarycolor);
+        width: 100px;
+        height: 35px;
+        border: none;
+        border-radius: 15px;
+        color: white;
+        text-transform: capitalize;
+        font-size: 18px; 
+    }
+    .container{
+        display: grid;
+        grid-gap: 2px;
+        label{
+            font-size: 18px;
+        }
+        input{
+            width: 250px;
+            height: 24px;
+        }
+    }
+    .Auth-type{
+        color: var(--grey);
+        font-size: 20px;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        text-transform: capitalize;
+        margin-bottom: 16px;
+        .container{
+         margin-top: 20px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+        }
+    }
+}

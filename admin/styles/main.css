@@ -1,0 +1,269 @@
+:root {
+  --primarycolor:#FFAD05;
+  --darkcolor:#0D1B2A;
+  --lightwhite:#F7F7F7;
+  --grey:#6e6d7a;
+  --custom-green:#4CD333;
+}
+
+body {
+  font-family: 'Poppins';
+  background-color: #F7F7F7;
+}
+
+body span {
+  font-weight: 600;
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
+  text-transform: capitalize;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0D1B2A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .logo {
+  padding-top: 5px;
+  font-size: 1.7em;
+  font-weight: 400;
+}
+
+.navbar h1 {
+  color: white;
+}
+
+.navbar h1 span {
+  color: var(--primarycolor);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar :hover {
+  color: var(--primarycolor);
+}
+
+.navbar :active {
+  color: var(--primarycolor);
+}
+
+.navbar .links {
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  gap: 8px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.navbar .accountsection ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.navbar .accountsection .signin-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 400;
+  background-color: var(--primarycolor);
+  border-radius: 9px;
+  text-decoration: none;
+  width: 100px;
+  height: 100x;
+}
+
+.admin-events-list {
+  margin-top: 100px;
+  background-color: white;
+  margin-left: 15px;
+}
+
+.admin-events-list .title-and-add-btn {
+  background-color: var(--lightwhite);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+}
+
+.admin-events-list .title-and-add-btn .title {
+  font-size: 22px;
+  text-transform: capitalize;
+}
+
+.admin-events-list .title-and-add-btn .add-btn {
+  background-color: var(--darkcolor);
+  border-radius: 22px;
+  padding: 10px;
+}
+
+.admin-events-list .title-and-add-btn .add-btn a {
+  text-decoration: none;
+  color: var(--primarycolor);
+}
+
+.admin-events-list .events-list {
+  background-color: var(--lightwhite);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.admin-events-list .events-list .event-container {
+  border: .1px solid black;
+  background-color: white;
+  margin-top: 15px;
+  padding: 5px;
+}
+
+.admin-events-list .events-list .event-container .event-details {
+  text-transform: capitalize;
+  font-size: 18px;
+}
+
+.admin-events-list .events-list .event-container .event-details span {
+  color: var(--primarycolor);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.projects-list {
+  margin-top: 100px;
+}
+
+.projects-list .projects .title {
+  font-size: 22px;
+  text-transform: capitalize;
+  margin-left: 11px;
+}
+
+.projects-list .projects .project {
+  padding-bottom: 15px;
+  padding-left: 10px;
+  margin: 15px;
+  background-color: white;
+}
+
+.projects-list .projects .project .title-plus-rate-btn {
+  padding: 0px 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects-list .projects .project .title-plus-rate-btn .rate-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--custom-green);
+  color: white;
+  padding: 8px;
+  border-radius: 12px;
+  width: 50px;
+}
+
+.projects-list .projects .project .title-plus-rate-btn .project-title {
+  font-size: 28px;
+  text-transform: capitalize;
+  font-weight: 400;
+  color: var(--primarycolor);
+}
+
+.projects-list .projects .project .details {
+  margin-left: 0%;
+  text-transform: capitalize;
+}
+
+.projects-list .projects .project .download-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background-color: var(--darkcolor);
+  width: 110px;
+  height: 40px;
+  border-radius: 15px;
+}
+
+.projects-list .projects .project .download-btn a {
+  font-weight: 300;
+  text-decoration: none;
+  color: var(--primarycolor);
+  text-transform: capitalize;
+}
+/*# sourceMappingURL=main.css.map */

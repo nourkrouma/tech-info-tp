@@ -30,14 +30,14 @@ const firebaseConfig = {
 const collectionRefrence=collection(database,'events')
 // get the collection data
 getDocs(collectionRefrence).then((snapshot)=>{
-    console.log(snapshot.docs)})
-//     let events=[];
-//     snapshot.docs.forEach((doc) => {
-//         events.push({...doc.data(),id:doc.id})
+    // console.log(snapshot.docs)})
+    let events=[];
+    snapshot.docs.forEach((doc) => {
+        events.push({...doc.data(),id:doc.id})
         
-//     });
-//     console.log(events)
+    });
+    console.log(events)
 
-// }).catch(err=>{
-//     console.log(err.message)
-// })
+}).catch(err=>{
+    console.log(err.message)
+})

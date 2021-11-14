@@ -2,7 +2,8 @@
 // Import the functions you need from the SDKs you need
 import {initializeApp} from 'firebase/app'
 import {
-    getFirestore,collection,getDocs
+    getFirestore,collection,getDocs,
+    addDoc,deleteDoc,doc
 } from 'firebase/firestore'
 // import {getAuth} from 'firebase/auth'
 // TODO: Add SDKs for Firebase products that you want to use
@@ -40,4 +41,24 @@ getDocs(collectionRefrence).then((snapshot)=>{
 
 }).catch(err=>{
     console.log(err.message)
+})
+// adding documents
+// TODO: add function appears to only be working in the index.html file 
+// TODO: fix the issue with the linking
+const addEventForm=document.querySelector('.add-event-form')
+addEventForm.addEventListener('submit',(e)=>{
+    // preventdefault action which is resetting the form when submitting
+    e.preventDefault()
+    addDoc(collectionRefrence,{
+        title:addEventForm.eventTitle.value,
+        branch:addEventForm.branch.value,
+        beginDate:addEventForm.startDate.value,
+        endDate:addEventForm.endDate.value,
+        description:addEventForm.description.value,
+        
+
+    }).then(()=>{
+    addEventForm.reset() 
+}
+    )
 })

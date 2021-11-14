@@ -32,39 +32,40 @@
     <section class="add-event">
        <div class="container-form">
            <h2 >Add event</h2>
-        <form action="#" method="get" class="add-event-form">
-            <label for="event-title">Event Title</label>
+        <form class="add-event-form">
+            <label for="eventTitle" >Event Title</label>
             <br>
-            <input type="text">
+            <input type="text" name="eventTitle" required>
+            <!-- <label for="eventCategorry" >Categorry</label>
             <br>
-            <select name="branch" id="branch">
+            <input type="text" name="eventCategorry" required> -->
+            <label for="event-categorry">categorry</label> 
+            <br>
+            <select name="branch" id="branch" required>
                 <option value="MASTER1-GLAA">MASTER1-GLAA</option>
                 <option value="MASTER1-RSD">MASTER1-RSD</option>
                 <option value="MASTER1-SI">MASTER1-SI</option>
                 <option value="MASTER1-SIAA">MASTER1-SIAA</option>
                 <option value="MASTER1-GLAA">MASTER1-GLAA</option>
-            </select>
+            </select> 
             <br>
-            <label for="event-categorry">categorry</label>
+            <label for="Start-date"  >Start Date</label>
             <br>
-            <input type="text">
+            <input type="datetime" name="startDate" id="Start-date"required>
             <br>
-            <label for="Start-date">Start Date</label>
+            <label for="End-date" >End Date</label>
             <br>
-            <input type="datetime" name="Start-date" id="Start-date">
-            <br>
-            <label for="End-date">End Date</label>
-            <br>
-            <input type="datetime" name="End-date" id="End-date">
+            <input type="datetime" name="endDate" id="End-date"required>
             <br>
             <label for="description">description</label>
             <br>
-            <textarea name="description" id="description" cols="30" rows="10"></textarea>
+            <textarea name="description" id="description" cols="30" rows="10" required></textarea>
             <br>
-            <button type="submit" class="add-button">Add event</button>
-                   
+            <button type="submit" class="addButton">Add event</button>
+
             </form>
        </div>
     </section>
+    <script src="/dist/bundle.js"></script>
 </body>
 </html>

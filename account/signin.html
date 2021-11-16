@@ -31,7 +31,7 @@
         </header>
         <!-- end of header -->
         <section class="accountSection">
-            <form action="#" method="get">
+            <form id="signInForm" >
                 <div class="Auth-type">
                     SignIn
                 </div>
@@ -40,11 +40,11 @@
                     <br>
                     <label for="email">Email</label>
                     <br>
-                    <input type="email" placeholder="email">
+                    <input type="email" id="signInEmail" placeholder="email">
                     <br>
                     <label for="psw">Password</label>
                     <br>
-                    <input type="password" name="password" id="password" placeholder="password">
+                    <input id="signInPassword" type="password" name="password" id="password" placeholder="password">
                     <br>
                 </div>
                     <input type="submit" value="Signin" class="submit">
@@ -55,5 +55,6 @@
             <div class="admin-auth">Signin as admin?<a href="signin_as_admin.html"><span>Admin</span></a></div>
             
         </section>
+        <script src="/dist/bundle.js"></script>
 </body>
 </html>

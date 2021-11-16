@@ -2,15 +2,10 @@
 // Import the functions you need from the SDKs you need
 import {initializeApp} from 'firebase/app'
 import {
-    getFirestore,collection,getDocs,
+    getFirestore,collection,onSnapshot,
     addDoc,deleteDoc,doc
 } from 'firebase/firestore'
-// import {getAuth} from 'firebase/auth'
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+import {getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged} from "firebase/auth";
 
 // Initialize Firebase
 const firebaseConfig = {
@@ -24,27 +19,22 @@ const firebaseConfig = {
   };
 // !initialization 
  initializeApp(firebaseConfig);
-//  !
+//   databse reference
  const database=getFirestore();
-
+// Auth reference
+ const auth=getAuth();
 // collection reference
 const collectionRefrence=collection(database,'events')
-// get the collection data
-getDocs(collectionRefrence).then((snapshot)=>{
-    // console.log(snapshot.docs)})
+// Real Time collection data
+onSnapshot(collectionRefrence,(snapshot)=>{
     let events=[];
     snapshot.docs.forEach((doc) => {
         events.push({...doc.data(),id:doc.id})
         
     });
-    console.log(events)
-
-}).catch(err=>{
-    console.log(err.message)
 })
+
 // adding documents
-// TODO: add function appears to only be working in the index.html file 
-// TODO: fix the issue with the linking
 const addEventForm=document.querySelector('.add-event-form')
 addEventForm.addEventListener('submit',(e)=>{
     // preventdefault action which is resetting the form when submitting
@@ -55,10 +45,74 @@ addEventForm.addEventListener('submit',(e)=>{
         beginDate:addEventForm.startDate.value,
         endDate:addEventForm.endDate.value,
         description:addEventForm.description.value,
-        
+
 
     }).then(()=>{
     addEventForm.reset() 
 }
     )
 })
+
+
+
+
+//! event listener for the submit form
+// !Sign up
+const addUserForm=document.querySelector('#signup-form')
+addUserForm.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    const email=addUserForm.getElementById('email').value
+    const password=addUserForm.getElementById('password').value
+
+    // Create uesrs
+    createUserWithEmailAndPassword(auth,email,password)
+    .then( (userCredential)=> 
+{
+    console.log(userCredential.email)
+    //signed in 
+    const user=userCredential.user;
+
+}
+)
+.catch((error)=>{
+    const errorCode=error.code;
+    const errorMessage=error.message;
+})
+
+})
+// ! log in 
+const logUser=document.querySelector('#signInForm')
+logUser.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    
+        const email=logUser.getElementById('signInEmail').value;
+        const password=logUser.getElementById('signInPassword').value;
+        // const password=logUser['signInPassword'].value
+        console.log('you entered:')
+        console.log(email,password)
+
+
+   
+    // signin
+    signInWithEmailAndPassword(auth,email,password).then((userCredential)=>{
+    //signed in
+    console.log(userCredential)
+    const user=userCredential.user;
+    // Error handling 
+    }).catch((error)=>{
+    const errorCode=error.code;
+    const errorMessage=error.message;
+    console.log(errorCode,errorMessage);
+})
+})
+
+
+
+// // authentication stream
+// onAuthStateChanged(auth,(user)=>{
+//     if (user) {
+//             const uid=user.uid;
+//     } else {
+//         // alert('user signed out')
+//     }
+// })

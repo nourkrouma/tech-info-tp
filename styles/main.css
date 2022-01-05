@@ -118,62 +118,6 @@ ul {
   margin: 15px;
 }
 
-.events-lists .events {
-  padding-bottom: 15px;
-  padding-left: 10px;
-  margin: 15px;
-  background-color: white;
-}
-
-.events-lists .events .title-and-join-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0px 9px;
-}
-
-.events-lists .events .title-and-join-btn .event-title {
-  font-size: 28px;
-  text-transform: capitalize;
-  font-weight: 400;
-  color: var(--primarycolor);
-}
-
-.events-lists .events .title-and-join-btn .join-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  background-color: var(--darkcolor);
-  width: 66px;
-  height: 40px;
-  border-radius: 22px;
-}
-
-.events-lists .events .title-and-join-btn .join-btn a {
-  text-decoration: none;
-  color: var(--primarycolor);
-  text-transform: capitalize;
-  font-weight: 300;
-}
-
-.events-lists .events .details {
-  margin-left: 0%;
-  text-transform: capitalize;
-}
-
 .projects-list {
   margin-top: 100px;
 }

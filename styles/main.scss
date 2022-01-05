@@ -75,51 +75,12 @@ height: 100x;
 }
 }
 .events-lists{
+    
     .filter{
         margin: 15px;
     }
     margin-top: 100px;
-    .events{
-        padding-bottom:15px;
-        padding-left: 10px;
-        margin: 15px;
-        background-color: white;
-        .title-and-join-btn{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0px 9px;
-            .event-title{
-                font-size: 28px;
-                text-transform: capitalize;
-                font-weight: 400;
-                color: var(--primarycolor);
-            }
-            .join-btn{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                a{
-
-                    text-decoration: none;
-                    color: var(--primarycolor);
-                    text-transform: capitalize;
-                    font-weight: 300;
-
-                }
-                text-align: center;
-                background-color: var(--darkcolor);
-                width: 66px;
-                height: 40px;
-                border-radius: 22px;
-            }
-        }
-   .details{
-       margin-left: 0%;
-       text-transform: capitalize;
-    }
    
-    }
 }
 .projects-list{
     margin-top: 100px;

@@ -1,9 +1,8 @@
 // Authentication 
 // Import the functions you need from the SDKs you need
 import {initializeApp} from 'firebase/app';
-import {getFirestore,collection,onSnapshot,addDoc,deleteDoc,doc} from 'firebase/firestore';
+import {getFirestore,collection,onSnapshot,addDoc,deleteDoc,doc, DocumentData, QueryDocumentSnapshot} from 'firebase/firestore';
 import {getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,signOut} from "firebase/auth";
-
 // Initialize Firebase
 const firebaseConfig = {
     apiKey: "AIzaSyBzZXtyZOsYlVw6rv9zf09Mtdcsj8YC4vs",
@@ -17,28 +16,25 @@ const firebaseConfig = {
 // * initialization 
  initializeApp(firebaseConfig);
 //   databse reference
-
  const database=getFirestore();
 // Auth reference
  const auth=getAuth();
-// collection reference
-const collectionRefrence=collection(database,'events')
-const colRef=collection(database,'winners')
-// *Real Time collection data of events
-onSnapshot(collectionRefrence,(snapshot)=>{
-    snapshot.docs.forEach((doc) => {
+// databse collection refrence
+const eventsRefrence=collection(database,'events',)
+const winnersRefrence=collection(database,'winners',)
+onSnapshot(eventsRefrence,(snapshot)=>{
+    snapshot.docs.forEach((doc)=>{
         eventListFromFirestore(doc);
-    });
+    })
 })
-// * colletion data of winners
-onSnapshot (colRef,(snapshot)=>{
+onSnapshot(winnersRefrence,(snapshot)=>{
     snapshot.docs.forEach((doc)=>{
         winnersListFromFirestore(doc);
     })
 })
 // * function to render the data from firesotre to event template
 const eventsList=document.querySelector('.events');
-function eventListFromFirestore(doc){
+function eventListFromFirestore(doc: QueryDocumentSnapshot<DocumentData>){
     // * fetching attributes from the list
     let li=document.createElement('li');
     // *li style
@@ -86,7 +82,6 @@ function eventListFromFirestore(doc){
         // *optional 
         // *add delete event button
     }
-    
     // * attributes from firestore
     let startDate=document.createElement('div');
     let endDate=document.createElement('div');
@@ -104,14 +99,11 @@ function eventListFromFirestore(doc){
     li.appendChild(startDate);
     li.appendChild(endDate);
     li.appendChild(description);
-
-    eventsList.appendChild(li);
+    eventsList?.appendChild(li);
 }
-
-
 // * funtion for renderign winners from firestore to the page
 const winnersList=document.querySelector('.results');
-function winnersListFromFirestore(doc){
+function winnersListFromFirestore(doc: QueryDocumentSnapshot<DocumentData>){
 let li=document.createElement('li');
 li.setAttribute('winnerId',doc.id);
 li.style.paddingBottom='15px';
@@ -173,17 +165,14 @@ li.appendChild(score2);
 li.appendChild(thirdTitle);
 li.appendChild(thirdWinner);
 li.appendChild(score3);
-winnersList.appendChild(li);
+winnersList?.appendChild(li);
 }
-
-
-
-
-// adding documents
-const addEventForm=document.querySelector('.add-event-form')
-addEventForm.addEventListener('submit',(e)=>{
+//adding documents
+const addEventForm=document.querySelector('.add-event-form') as HTMLFormElement
+if(addEventForm!=null){
+addEventForm?.addEventListener('submit',(e:Event)=>{
     e.preventDefault();
-    addDoc(collectionRefrence,{
+    addDoc(eventsRefrence,{
         title:addEventForm.eventTitle.value,
         branch:addEventForm.branch.value,
         beginDate:addEventForm.startDate.value,
@@ -193,35 +182,37 @@ addEventForm.addEventListener('submit',(e)=>{
     addEventForm.reset();
 }
     )
-},false);
+})}
+//signup form
+const createUserForm=document.querySelector("#signupForm") as HTMLFormElement
+if (createUserForm!=null) {
+    createUserForm.addEventListener('submit',(e:Event)=>{
+        e.preventDefault();
+    let signupemail=createUserForm.querySelector("#emailInput") as HTMLInputElement
+    let signuppassword=createUserForm.querySelector("#passwordInput") as HTMLInputElement
+createUserWithEmailAndPassword(auth,signupemail.value.trim(),signuppassword.value).then((user)=>{
+    console.log("user created")
+    console.log("current user's email is"+user.user.email)
+}).catch((error)=>{
+    console.log("error :"+error);
+})
+} )
 
 
- //*  signup form listener
-const testSignupForm=document.querySelector('#signupForm');
-testSignupForm.addEventListener('submit',(e)=>{
+}
 
-    e.preventDefault();
-    const emailvalue=testSignupForm.querySelector('#emailInput').value;
-    const passwordvalue=testSignupForm.querySelector('#passwordInput').value;
-    createUserWithEmailAndPassword(auth,emailvalue,passwordvalue).then((userCredential)=>{
-        console.log("succes");
-        console.log('the user is'+userCredential.user);
-        testSignupForm.reset();
-    }).catch((error)=>{
-        console.log("error"+error);
-    })
-},false);
 
-// *signin form 
-const testSigninForm=document.querySelector('#signinForm');
-testSigninForm.addEventListener('submit',(e)=>{
-    e.preventDefault();
-    const signinemail=testSigninForm.querySelector('#emailInput').value;
-    const signinpassword=testSigninForm.querySelector('#passwordInput').value;
-    signInWithEmailAndPassword(auth,signinemail,signinpassword).then((userCredential)=>{
-        console.log('succes');
-        testSigninForm.reset();
-    }).catch((error)=>{
-        console.log("error");
-    })
-},false)
+const loginForm=document.querySelector("#signinForm") as HTMLFormElement
+if (loginForm!=null) {
+    loginForm.addEventListener('submit',(e:Event)=>{
+        e.preventDefault();
+        let loginemail=loginForm.querySelector("#emailsigninInput") as HTMLInputElement
+        let loginpassword=loginForm.querySelector("#passwordsigninInput") as HTMLInputElement
+        signInWithEmailAndPassword(auth,loginemail.value,loginpassword.value).then((user)=>{
+            console.log("login with succes")
+            console.log("current user's email is"+user.user.email)
+        }).catch((error)=>{
+            console.log("an error occured"+error)
+        })
+        })
+}

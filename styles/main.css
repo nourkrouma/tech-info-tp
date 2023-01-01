@@ -6,10 +6,9 @@
 }
 
 body {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   background-color: #F7F7F7;
 }
-
 body span {
   font-weight: 600;
   -webkit-text-decoration: solid;
@@ -27,81 +26,49 @@ ul {
   left: 0;
   width: 100%;
   background-color: #0D1B2A;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
 }
-
 .navbar .logo {
   padding-top: 5px;
   font-size: 1.7em;
   font-weight: 400;
 }
-
 .navbar h1 {
   color: white;
 }
-
 .navbar h1 span {
   color: var(--primarycolor);
 }
-
 .navbar a {
   text-decoration: none;
   color: white;
 }
-
 .navbar :hover {
   color: var(--primarycolor);
 }
-
 .navbar :active {
   color: var(--primarycolor);
 }
-
 .navbar .links {
   font-weight: 400;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   gap: 8px;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
-
 .navbar .accountsection ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   gap: 8px;
   font-weight: 500;
 }
-
 .navbar .accountsection .signin-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   font-weight: 400;
   background-color: var(--primarycolor);
   border-radius: 9px;
@@ -113,7 +80,6 @@ ul {
 .events-lists {
   margin-top: 100px;
 }
-
 .events-lists .filter {
   margin: 15px;
 }
@@ -121,43 +87,32 @@ ul {
 .projects-list {
   margin-top: 100px;
 }
-
 .projects-list .projects .project {
   padding-bottom: 15px;
   padding-left: 10px;
   margin: 15px;
   background-color: white;
 }
-
 .projects-list .projects .project .project-title {
   font-size: 28px;
   text-transform: capitalize;
   font-weight: 400;
   color: var(--primarycolor);
 }
-
 .projects-list .projects .project .details {
   margin-left: 0%;
   text-transform: capitalize;
 }
-
 .projects-list .projects .project .download-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   background-color: var(--darkcolor);
   width: 110px;
   height: 40px;
   border-radius: 22px;
 }
-
 .projects-list .projects .project .download-btn a {
   font-weight: 300;
   text-decoration: none;
@@ -168,57 +123,41 @@ ul {
 .results-list {
   margin-top: 100px;
 }
-
 .results-list .results .result {
   padding-bottom: 15px;
   padding-left: 10px;
   margin: 15px;
   background-color: white;
 }
-
 .results-list .results .result .title-result {
   font-size: 28px;
   text-transform: capitalize;
   font-weight: 400;
   color: var(--primarycolor);
 }
-
 .results-list .results .result .details {
   margin-left: 0%;
   text-transform: capitalize;
 }
-
 .results-list .results .result .details .points {
   color: green;
 }
 
 .upload {
   margin-top: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
 .upload .title {
   font-size: 25px;
   text-transform: capitalize;
 }
-
 .upload .sub-title {
   font-size: 16px;
   color: var(--grey);
 }
-
 .upload .upload-container {
   margin-top: 30px;
   border-style: dashed;
@@ -226,53 +165,30 @@ ul {
   border-color: #707070;
   padding: 40px;
   background-color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
 .upload .upload-container .img-and-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-
 .upload .upload-container .img-and-title h3 {
   font-size: 16px;
   font-weight: 400;
   text-transform: capitalize;
 }
-
 .upload .upload-container .img-and-title h3 span {
   color: var(--primarycolor);
 }
-
 .upload .upload-container .img-and-title .img {
   width: 25px;
   height: 25px;
   padding: 5px;
 }
-
 .upload .upload-container .btn-container {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -280,65 +196,14 @@ ul {
   height: 40px;
   background-color: var(--primarycolor);
   border-radius: 11px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   padding: 5px;
 }
-
 .upload .upload-container .btn-container img {
   width: 25px;
   height: 25px;
   padding: 5px;
-}
-.accountSection {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  padding-bottom: 60px;
-  background: #F7F7F7;
-}
-.accountSection  form{
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
-  background: #FFFAE1;
-  text-align: center;
-
-}
-.accountSection form h3{
-  font-size: 30px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  color:#FFAD05;
-}
-.accountSection form input,.accountSection form select{
-  width: 100%;
-  padding: 10px 15px;
-  font-size: 17px;
-  margin: 8px 0;
-  background: #F7F7F7;
-}
-.accountSection form select option{
-  background: #F7F7F7;
-}
-.accountSection form .signUp_btn{
-  background: #FFFAE1;
-  color: blue;
-  text-transform: lowercase;
-  font-size: 20px;
-  cursor: pointer;
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

@@ -6,10 +6,9 @@
 }
 
 body {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   background-color: #F7F7F7;
 }
-
 body span {
   font-weight: 600;
   -webkit-text-decoration: solid;
@@ -27,81 +26,49 @@ ul {
   left: 0;
   width: 100%;
   background-color: #0D1B2A;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
 }
-
 .navbar .logo {
   padding-top: 5px;
   font-size: 1.7em;
   font-weight: 400;
 }
-
 .navbar h1 {
   color: white;
 }
-
 .navbar h1 span {
   color: var(--primarycolor);
 }
-
 .navbar a {
   text-decoration: none;
   color: white;
 }
-
 .navbar :hover {
   color: var(--primarycolor);
 }
-
 .navbar :active {
   color: var(--primarycolor);
 }
-
 .navbar .links {
   font-weight: 400;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   gap: 8px;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
-
 .navbar .accountsection ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   gap: 8px;
   font-weight: 500;
 }
-
 .navbar .accountsection .signin-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   font-weight: 400;
   background-color: var(--primarycolor);
   border-radius: 9px;
@@ -114,39 +81,21 @@ ul {
   margin: 100px 20px;
   background-color: white;
   padding: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
-
 .accountSection .different-auth {
   margin-top: 25px;
 }
-
 .accountSection .signUp {
   margin-top: 10px;
   margin-left: 25%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   background-color: var(--primarycolor);
   width: 100px;
   height: 35px;
@@ -156,48 +105,29 @@ ul {
   text-transform: capitalize;
   font-size: 18px;
 }
-
 .accountSection .container {
-  display: -ms-grid;
   display: grid;
   grid-gap: 2px;
 }
-
 .accountSection .container label {
   font-size: 18px;
 }
-
 .accountSection .container input {
   width: 250px;
   height: 24px;
 }
-
 .accountSection .Auth-type {
   color: var(--grey);
   font-size: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   text-transform: capitalize;
   margin-bottom: 16px;
 }
-
 .accountSection .Auth-type .container {
   margin-top: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-/*# sourceMappingURL=account-style.css.map */
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=account-style.css.map */

@@ -26,7 +26,7 @@ ul {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #FFFAE1;
+  background-color: #0D1B2A;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,20 +41,19 @@ ul {
   padding-top: 5px;
   font-size: 1.7em;
   font-weight: 400;
-  color: #FFAD05;
 }
 
 .navbar h1 {
   color: white;
 }
 
-/*.navbar h1 span {
+.navbar h1 span {
   color: var(--primarycolor);
 }
-*/
+
 .navbar a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .navbar :hover {
@@ -67,12 +66,20 @@ ul {
 
 .navbar .links {
   font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  gap: 8px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.navbar .links li {
-  padding: 10px 50px;
-}
 .navbar .accountsection ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -82,8 +89,7 @@ ul {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 8px;
-  font-weight: 800;
-  font-style: italic;
+  font-weight: 500;
 }
 
 .navbar .accountsection .signin-box {
@@ -96,18 +102,16 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-weight: 800;
-  /*background-color: var(--primarycolor); */
-  border: 2px solid #FFAD05;
-  border-radius: 5px;
+  font-weight: 400;
+  background-color: var(--primarycolor);
+  border-radius: 9px;
   text-decoration: none;
   width: 100px;
   height: 100x;
 }
 
 .events-lists {
-  margin-top: 150px;
-  text-align: center;
+  margin-top: 100px;
 }
 
 .events-lists .filter {
@@ -115,13 +119,7 @@ ul {
 }
 
 .projects-list {
-    max-width: none;
-    margin: 0 auto;
-    padding-top: 90px;
-}
-
-.projects-list .projects {
-  display: flex;
+  margin-top: 100px;
 }
 
 .projects-list .projects .project {
@@ -129,17 +127,13 @@ ul {
   padding-left: 10px;
   margin: 15px;
   background-color: white;
-
-  width: 30%; 
-  float: left; 
 }
 
 .projects-list .projects .project .project-title {
   font-size: 28px;
   text-transform: capitalize;
   font-weight: 400;
-  color: #0D1B2A;
-  font-style: italic;
+  color: var(--primarycolor);
 }
 
 .projects-list .projects .project .details {
@@ -158,11 +152,10 @@ ul {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  /*background-color: var(--darkcolor); */
-  border: 2px solid #FFAD05;
+  background-color: var(--darkcolor);
   width: 110px;
   height: 40px;
-  border-radius: 5px;
+  border-radius: 22px;
 }
 
 .projects-list .projects .project .download-btn a {

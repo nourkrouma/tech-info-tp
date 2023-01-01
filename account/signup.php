@@ -8,27 +8,7 @@
     <title>Create an account</title>
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <h1 class="logo"><span>Tech</span>info</h1>
-            
-                <ul class="links">
-                    <li><a href="/index.html">Events</a></li>
-                    <li><a href="results.html">Results</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                </ul>
-            <div class="accountsection">
-                <ul>
-                    <li><a href="signup.html">Signup</a></li>
-                    <li>
-                        <div class="signin-box">
-                            <a href="signin.html">Signin</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        </header>
+    <?php include('header.php'); ?>
     <!-- end of header -->
     <section class="accountSection">
 

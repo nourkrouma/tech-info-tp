@@ -5,32 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css">
-    <title>Tech info</title>
+    <title>jenkins CI/CD</title>
 </head>
 <body>
     <header>
-<div class="navbar">
-    <h1 class="logo"><span>Tech</span>info</h1>
+        <div class="navbar">
+        <h1 class="logo">TECH INFO</h1>
     
-        <ul class="links">
-            <li><a href="index.html">Events</a></li>
-            <li><a href="results.html">Results</a></li>
-            <li><a href="projects.html">Projects</a></li>
-        </ul>
-    <div class="accountsection">
-        <ul>
-            <li><a href="account/signup.html">Signup</a></li>
-            <li>
-                <div class="signin-box">
-                    <a href="account/signin.html">Signin</a>
-                </div>
-            </li>
-        </ul>
+            <ul class="links">
+                <li><a href="index.html">Events</a></li>
+                <li><a href="results.html">Results</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        <div class="accountsection">
+            <ul>
+                <li><a href="account/signup.html">Sign up</a></li>
+                <li>
+                    <div class="signin-box">
+                        <a href="account/signin.html">Sign in</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
-</div>
 </header>
- <!--end of header-->
-<!-- events list -->
+ <!--end of 
 <section class="events-lists">
     <label for="branch"class="filter">Branch:</label>
                 <!-- <drop down menu for filtering the events> -->
@@ -49,8 +48,7 @@
 <ul class="events">
     
         <!-- * data from firestore goes in here -->
-
-      
+<h1>changes made from mac enviroment </h1>
 </ul>
  </section>
  <script src="/dist/bundle.js"></script>

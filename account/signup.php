@@ -8,7 +8,7 @@
     <title>Create an account</title>
 </head>
 <body>
-    <?php include('header.php'); ?>
+    <?php include('index.php'); ?>
     <!-- end of header -->
     <section class="accountSection">
 

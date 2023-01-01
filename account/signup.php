@@ -8,8 +8,7 @@
     <title>Create an account</title>
 </head>
 <body>
-    <?php include('index.php'); ?>
-    <!-- end of header -->
+   <!-- end of header -->
     <section class="accountSection">
 
         <form id="signupForm" method="get">

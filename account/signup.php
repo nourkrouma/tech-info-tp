@@ -38,9 +38,8 @@
                 SignUp
             </div>
             <div class="container">
-                <label for="branch">Branch:</label>
-             <br>
-              <select name="branch" id="branch">
+                
+              <select name="branch" id="branch" aria-placeholder="Select Your Branch">
                     <option value="MASTER1-GLAA">MASTER1-GLAA</option>
                     <option value="MASTER1-RSD">MASTER1-RSD</option>
                     <option value="MASTER1-SI">MASTER1-SI</option>
@@ -50,17 +49,14 @@
                     <option value="MASTER2-GLAA">MASTER2-GLAA</option>
                     <option value="MASTER2-RSD">MASTER2-RSD</option>
                 </select> 
-                <br>
-                <label for="email">Email</label>
-                <br>
-                <input type="email" id="emailInput" required>
-                <br>
-                <label for="psw">Password</label>
-                <br>
-                <input id="passwordInput" type="password" required>
-                <br>
+                
+                <input type="email" id="emailInput"  placeholder="Enter your Email" required>
+                <input id="passwordInput" type="password" placeholder="Enter your Password " required>
+                <input id="passwrd" type="password" placeholder="Confirm your password" required>
+
             </div>
-            <button type="submit" class="signUp">Signup</button> 
+            <input type="submit" name="submit" value="Register Now" class="signUp">
+            <p>Already have an accoount ? <a href="signin.php"> Login </a></p>
     </section>
     <script src="/dist/bundle.js"></script>
   

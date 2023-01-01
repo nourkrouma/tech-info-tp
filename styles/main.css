@@ -308,4 +308,44 @@ ul {
   height: 25px;
   padding: 5px;
 }
+.accountSection {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  padding-bottom: 60px;
+  background: #F7F7F7;
+}
+.accountSection  form{
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+  background: #FFFAE1;
+  text-align: center;
+
+}
+.accountSection form h3{
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color:#FFAD05;
+}
+.accountSection form input,.accountSection form select{
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 17px;
+  margin: 8px 0;
+  background: #F7F7F7;
+}
+.accountSection form select option{
+  background: #F7F7F7;
+}
+.accountSection form .signUp_btn{
+  background: #FFFAE1;
+  color: blue;
+  text-transform: lowercase;
+  font-size: 20px;
+  cursor: pointer;
+}
 /*# sourceMappingURL=main.css.map */

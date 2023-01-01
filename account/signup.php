@@ -34,11 +34,13 @@
 
         <form id="signupForm" method="get">
 
-            <div class="Auth-type">
+            <h3 >
                 SignUp
-            </div>
-            <div class="container">
-                
+            </h3>
+            
+                <input type="email" id="emailInput"  placeholder="Enter your Email" required>
+                <input id="passwordInput" type="password" placeholder="Enter your Password " required>
+                <input id="passwrd" type="password" placeholder="Confirm your password" required> 
               <select name="branch" id="branch" aria-placeholder="Select Your Branch">
                     <option value="MASTER1-GLAA">MASTER1-GLAA</option>
                     <option value="MASTER1-RSD">MASTER1-RSD</option>
@@ -49,14 +51,10 @@
                     <option value="MASTER2-GLAA">MASTER2-GLAA</option>
                     <option value="MASTER2-RSD">MASTER2-RSD</option>
                 </select> 
-                
-                <input type="email" id="emailInput"  placeholder="Enter your Email" required>
-                <input id="passwordInput" type="password" placeholder="Enter your Password " required>
-                <input id="passwrd" type="password" placeholder="Confirm your password" required>
-
-            </div>
-            <input type="submit" name="submit" value="Register Now" class="signUp">
-            <p>Already have an accoount ? <a href="signin.php"> Login </a></p>
+                <input type="submit" name="submit" value="Register Now" class="signUp_btn">
+                <p>Already have an accoount ? <a href="signin.php"> Login </a></p>
+           
+        </form>   
     </section>
     <script src="/dist/bundle.js"></script>
   
